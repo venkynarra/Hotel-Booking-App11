@@ -1,0 +1,10 @@
+Requirements!
+
+User can see a list of hotels
+user can book a hotel
+user have to get a reservation ticket!
+
+Classes:
+
+Hotel class
+reservationTicket class
