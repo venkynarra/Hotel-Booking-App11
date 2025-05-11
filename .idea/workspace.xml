@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="864dd653-4e49-49aa-9f29-a51e467b2881" name="Changes" comment="Day 42- fourth Commit-- Adding credit card feature, validating payment details.">
-      <change afterPath="$PROJECT_DIR$/card_security.csv" afterDir="false" />
+    <list default="true" id="864dd653-4e49-49aa-9f29-a51e467b2881" name="Changes" comment="Day 42- fifth Commit-- secure credit card details.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hotels.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planning.txt" beforeDir="false" afterPath="$PROJECT_DIR$/planning.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746977862470</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Day 42- fifth Commit-- secure credit card details.">
+      <option name="closed" value="true" />
+      <created>1746980303261</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746980303261</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,6 +140,7 @@
     <MESSAGE value="Day 41- Created Hotel and ReservationTicket Clasees and the main Function instance for it." />
     <MESSAGE value="Day 41- Second Commit-- Implemented methods of the Hotel class . changing the hotel availability to no after it is booked." />
     <MESSAGE value="Day 42- fourth Commit-- Adding credit card feature, validating payment details." />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 42- fourth Commit-- Adding credit card feature, validating payment details." />
+    <MESSAGE value="Day 42- fifth Commit-- secure credit card details." />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 42- fifth Commit-- secure credit card details." />
   </component>
 </project>
