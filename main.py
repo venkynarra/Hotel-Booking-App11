@@ -2,6 +2,7 @@ import pandas as pd
 df = pd.read_csv("hotels.csv", dtype = {"id": str})
 
 df_cards = pd.read_csv("cards.csv", dtype = str).to_dict(orient = "records")
+df_cards_security = pd.read_csv("card_security.csv", dtype = str)
 
 class Hotel:
     def __init__(self, hotel_id):
@@ -34,6 +35,8 @@ class ReservationTicket:
                Name: {self.customer_name}
                 hotel:{self.hotel.name}"""
         return content
+
+
 class Creditcard:
     def __init__(self, number):
         self.number = number  # making attribute of an instance.
@@ -46,6 +49,13 @@ class Creditcard:
         else:
             return False
 
+class SecureCreditcard(Creditcard): #inheriting using Creditcard, this is child class.
+    def authenticate(self, given_password):
+        password = df_cards_security.loc[df_cards_security["number"] == self.number, "password"].squeeze()
+        if password == given_password:
+            return True
+        else:
+            return False
 
 
 
@@ -57,12 +67,17 @@ hotel = Hotel(hotel_ID)
 
 if hotel.available():
 
-    credit_card = Creditcard(number = "1234567891234567")
-    if credit_card.validate(expiration = "12/26", holder = "Venky Narra", cvc= "123"):
-        hotel.book()
-        name = input("Enter Your Name: ")
-        reservation_ticket = ReservationTicket(customer_name=name, hotel_object=hotel)
-        print(reservation_ticket.generate())
+    credit_card = SecureCreditcard(number = "1234567891234567")
+    if credit_card.validate(expiration = "12/26", cvc= "123", holder = "Venky Narra"):
+
+        if credit_card.authenticate(given_password= "mypass"):
+
+            hotel.book()
+            name = input("Enter Your Name: ")
+            reservation_ticket = ReservationTicket(customer_name=name, hotel_object=hotel)
+            print(reservation_ticket.generate())
+        else:
+            print("Credit card authentication is failed")
     else:
         print("There is a problem with your payment")
 else:
